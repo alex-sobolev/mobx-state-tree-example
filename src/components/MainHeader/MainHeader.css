@@ -1,0 +1,10 @@
+.MainHeader {
+  height: 54px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}

@@ -1,0 +1,22 @@
+.Dog {
+  margin-left: 24px;
+  padding-left: 24px;
+  border-left: 2px solid black;
+}
+
+.DogView {
+  height: 280px;
+}
+
+.DogImage {
+  height: 280px;
+}
+
+.DogControls {
+  margin-top: 12px;
+}
+
+.DogLoading {
+  display: flex;
+  align-items: center;
+}

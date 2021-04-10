@@ -1,0 +1,8 @@
+.TodoHeader {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.TodoHeader-count {
+  color: deeppink;
+}
