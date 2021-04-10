@@ -29,6 +29,7 @@ export const DogStore = types
         this.setError(null);
         this.setDogSrc(data.message);
       } catch (err) {
+        this.setFetching(false);
         this.setError(err);
         this.setDogSrc('');
       }
