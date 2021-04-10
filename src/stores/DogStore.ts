@@ -9,6 +9,15 @@ export const DogStore = types
     error: types.optional(types.maybeNull(types.string), null),
   })
   .actions(self => ({
+    setFetching(val: boolean): void {
+      self.fetching = val;
+    },
+    setError(val: string | null) {
+      self.error = val;
+    },
+    setDogSrc(val: string): void {
+      self.dogSrc = val;
+    },
     async fetchDog(): Promise<void> {
       try {
         this.setFetching(true);
@@ -23,15 +32,6 @@ export const DogStore = types
         this.setError(err);
         this.setDogSrc('');
       }
-    },
-    setFetching(val: boolean): void {
-      self.fetching = val;
-    },
-    setError(val: string | null) {
-      self.error = val;
-    },
-    setDogSrc(val: string): void {
-      self.dogSrc = val;
     },
   }));
 
