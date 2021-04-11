@@ -4,10 +4,16 @@ import './index.css';
 import { App } from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { StoreProvider } from './stores';
+import { connectReduxDevtools } from 'mst-middlewares';
+import { createRootStore } from './stores';
+
+const rootStore = createRootStore();
+
+connectReduxDevtools(require('remotedev'), rootStore);
 
 const Root = (
   <React.StrictMode>
-    <StoreProvider>
+    <StoreProvider value={rootStore}>
       <App />
     </StoreProvider>
   </React.StrictMode>
